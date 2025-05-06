@@ -8,11 +8,11 @@ To build a machine learning model that accurately predicts the price of a laptop
 
 ## Summary
 This project demonstrates an end-to-end machine learning pipeline involving:
-Data collection and preprocessing
-Exploratory data analysis (EDA)
-Feature engineering
-Model training and evaluation using various regression techniques
-Performance comparison and selection of the best model
+* Data collection and preprocessing
+* Exploratory data analysis (EDA)
+* Feature engineering
+* Model training and evaluation using various regression techniques
+* Performance comparison and selection of the best model
 
 The project helps understand how different laptop features contribute to price determination, using both traditional and ensemble machine learning models.
 
