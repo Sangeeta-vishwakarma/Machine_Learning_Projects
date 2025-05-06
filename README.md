@@ -23,35 +23,35 @@ The project helps understand how different laptop features contribute to price d
 The dataset used was sourced from Kaggle and contains specifications of various laptops along with their respective prices.
 ## Data Loading & Cleaning
 
-Loaded data using pandas
-Removed irrelevant columns and units from fields like Ram, Weight
-Handled missing values and duplicates
+* Loaded data using pandas
+* Removed irrelevant columns and units from fields like Ram, Weight
+* Handled missing values and duplicates
 
 ## Exploratory Data Analysis (EDA)
-Visualized the distribution of laptop brands, processor types, and RAM
-Investigated correlations between features and the target variable (price)
+* Visualized the distribution of laptop brands, processor types, and RAM
+* Investigated correlations between features and the target variable (price)
 
 ## Feature Engineering
 Extracted and transformed features such as:
-PPI (Pixels Per Inch) from screen resolution
-Simplified CPU and GPU brand
-Converted categorical variables to numeric using Label Encoding/One-Hot Encoding
+* PPI (Pixels Per Inch) from screen resolution
+* Simplified CPU and GPU brand
+* Converted categorical variables to numeric using Label Encoding/One-Hot Encoding
 
 ## Modeling
 Trained and evaluated multiple regression models:
-Linear Regression
-Ridge and Lasso Regression
-Decision Tree Regressor
-Random Forest Regressor
-Gradient Boosting Regressor
-XGBoost
-Stacking and Voting Regressors
+* Linear Regression
+* Ridge and Lasso Regression
+* Decision Tree Regressor
+* Random Forest Regressor
+* Gradient Boosting Regressor
+* XGBoost
+* Stacking and Voting Regressors
 
 ## Evaluation Metrics
 
-R² Score
-RMSE (Root Mean Squared Error)
-Comparison of model performances was conducted to finalize the best approach
+* R² Score
+* RMSE (Root Mean Squared Error)
+* Comparison of model performances was conducted to finalize the best approach
 
 
 ## Why This Approach?
@@ -60,3 +60,9 @@ Comparison of model performances was conducted to finalize the best approach
 **Feature Engineering**: Domain-specific transformations like calculating PPI from resolution are used to boost model performance.
 
 **Performance-centric**: Models are selected not only based on accuracy but also interpretability and speed, crucial in real-world applications.
+
+
+## Results
+* The best-performing model achieved an R² score of ~89%, indicating high prediction accuracy.
+
+* Feature importance analysis revealed that screen resolution (PPI), RAM size, and CPU brand were top contributors to price prediction.
