@@ -1,5 +1,5 @@
 # Machine_Learning_Project
-[Laptop Price Predictor] (https://github.com/Sangeeta-vishwakarma/Machine_Learning_Projects/blob/main/laptop-price-predictor.ipynb)
+## 1. Laptop Price Predictor
 
 
 ## Objective
