@@ -66,7 +66,7 @@ Trained and evaluated multiple regression models:
 
 
 
-## 2. Customer Churn Prediction Using Deep Learning
+## 2. Customer Churn Prediction Using Machine Learning
 This project builds a binary classification model to predict whether a customer will churn (i.e., leave a bank) using a neural network built with TensorFlow/Keras. It performs data preprocessing, trains a deep learning model, and evaluates its performance using accuracy metrics and visualizations.
 
 ## Dataset
