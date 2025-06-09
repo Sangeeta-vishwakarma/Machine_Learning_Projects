@@ -22,7 +22,6 @@ The project helps understand how different laptop features contribute to price d
 
 The dataset used was sourced from Kaggle and contains specifications of various laptops along with their respective prices.
 ## Data Loading & Cleaning
-
 * Loaded data using pandas
 * Removed irrelevant columns and units from fields like Ram, Weight
 * Handled missing values and duplicates
@@ -48,7 +47,6 @@ Trained and evaluated multiple regression models:
 * Stacking and Voting Regressors
 
 ## Evaluation Metrics
-
 * R² Score
 * RMSE (Root Mean Squared Error)
 * Comparison of model performances was conducted to finalize the best approach
@@ -64,5 +62,61 @@ Trained and evaluated multiple regression models:
 
 ## Results
 * The best-performing model achieved an R² score of ~89%, indicating high prediction accuracy.
-
 * Feature importance analysis revealed that screen resolution (PPI), RAM size, and CPU brand were top contributors to price prediction.
+
+
+
+## 2. Customer Churn Prediction Using Deep Learning
+This project builds a binary classification model to predict whether a customer will churn (i.e., leave a bank) using a neural network built with TensorFlow/Keras. It performs data preprocessing, trains a deep learning model, and evaluates its performance using accuracy metrics and visualizations.
+
+## Dataset
+The dataset used is Churn_Modelling.csv, containing records of 10,000 customers and 14 attributes including:
+- Customer details: Geography, Gender, Age, Balance, Tenure, etc.
+- Target variable: Exited — 1 if the customer left the bank, 0 otherwise.
+
+## Data Loading and Exploration
+- Loaded dataset using pandas.
+- Inspected the shape, info, and verified there are no duplicate records.
+- Analyzed class distribution for Exited, Gender, and Geography.
+
+## Data Preprocessing
+- Dropped irrelevant columns: RowNumber, CustomerId, Surname.
+- Applied One-Hot Encoding to Geography and Gender.
+- Split data into features X and target y.
+- Performed train-test split (80% train, 20% test).
+- Scaled features using StandardScaler.
+
+## Model Building
+- Used Sequential model from Keras.
+- Two hidden layers allow the model to approximate more complex functions.
+- ReLU activation helps avoid vanishing gradient problem.
+- Sigmoid in output gives probabilities for binary classification.
+- Architecture:
+  - Input Layer: 11 nodes
+  - Hidden Layer 1: 11 nodes, ReLU
+  - Hidden Layer 2: 11 nodes, ReLU
+  - Output Layer: 1 node, Sigmoid (for binary classification)
+
+## Model Compilation & Training
+Compiled with:
+- Loss: binary_crossentropy
+  - Ideal for binary classification tasks like churn prediction.
+  - Penalizes incorrect predictions more when the model is confident but wrong, encouraging better calibration.
+- Optimizer: Adam
+  - Adaptive learning rate optimizer—combines the best of RMSProp and SGD.
+  - Works well for most problems, particularly when training deep networks.
+- Metrics: accuracy
+  - Accuracy is a simple and intuitive metric for balanced binary classification problems.
+  - Plotting loss and accuracy curves helps:
+    - Monitor training process.
+    - Detect overfitting or underfitting.
+Trained on the scaled training data.
+
+## Evaluation
+- Predicted churn probability on test data.
+- Converted probabilities to class labels using a threshold of 0.5.
+- Evaluated model performance using accuracy_score.
+- Plotted training history:
+  - Loss vs Epoch
+  - Accuracy vs Epoch
+
