@@ -120,3 +120,82 @@ Trained on the scaled training data.
   - Loss vs Epoch
   - Accuracy vs Epoch
 
+
+# 3. Breast Cancer Detection
+
+This machine learning project aims to predict whether breast tumors are malignant (cancerous) or benign (non-cancerous) using the Breast Cancer Wisconsin (Diagnostic) dataset. The solution implements and evaluates multiple classification algorithms to identify the best-performing model for this critical medical prediction task.
+
+## Dataset
+- Features: 30 tumor characteristics (radius, texture, perimeter, area, smoothness, compactness, concavity, symmetry, fractal dimension)
+- Target Variable: diagnosis (M = Malignant, B = Benign)
+- Samples: 569 (212 Malignant, 357 Benign)
+
+## Key Features
+- Comprehensive data preprocessing pipeline
+- Exploratory Data Analysis (EDA) with visualizations
+- Comparison of 8 machine learning models
+- Hyperparameter tuning using RandomizedSearchCV
+- Model evaluation with multiple metrics
+
+## Data Preprocessing
+- Removed null columns
+- Encoded target variable (M=1, B=0)
+- Scaled features using StandardScaler
+- Train-test split (75%-25%)
+
+## Modeling
+1. Logistic Regression
+2. Decision Tree Classifier
+3. Random Forest Classifier
+4. Support Vector Classifier
+5. K-Nearest Neighbors
+6. Naive Bayes Classifier
+7. AdaBoost Classifier
+8. XGBoost Classifier
+
+## Hyperparameter Tuning
+Performed RandomizedSearchCV on:
+- Random Forest Classifier
+- XGBoost Classifier
+
+## Results
+### Model Performance Comparison
+1. XGBoost (Tuned)
+Accuracy: 97.9% | Sensitivity: 100% | Specificity: 94.6%
+
+2. Random Forest
+Accuracy: 97.2% | Sensitivity: 98.9% | Specificity: 94.5%
+
+3. Support Vector Classifier
+Accuracy: 95.8% | Sensitivity: 97.7% | Specificity: 92.7%
+
+4. Logistic Regression
+Accuracy: 95.1% | Sensitivity: 96.6% | Specificity: 92.6%
+
+5. K-Nearest Neighbors
+Accuracy: 95.1% | Sensitivity: 93.7% | Specificity: 97.9%
+
+6. Naive Bayes
+Accuracy: 94.4% | Sensitivity: 94.6% | Specificity: 94.1%
+
+7. Decision Tree
+Accuracy: 93.7% | Sensitivity: 97.6% | Specificity: 87.9%
+
+8. AdaBoost
+Accuracy: 93.0% | Sensitivity: 96.5% | Specificity: 87.7%
+
+## Best Model Performance (XGBoost)
+### Key Metrics:
+- Accuracy: 97.9%
+- Sensitivity: 100% (correctly identified all malignant cases)
+- Specificity: 94.6%
+- Precision (Malignant): 95%
+- F1-Score (Malignant): 97%
+
+## Conclusion
+The tuned XGBoost classifier achieved the highest performance with:
+- 97.9% accuracy
+- 100% sensitivity (correctly identified all malignant cases)
+- 94.6% specificity
+
+This model demonstrates strong potential for assisting medical professionals in early detection of breast cancer. The high sensitivity is particularly valuable in medical diagnostics where false negatives (missing malignant tumors) have serious consequences.
