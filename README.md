@@ -199,3 +199,84 @@ The tuned XGBoost classifier achieved the highest performance with:
 - 94.6% specificity
 
 This model demonstrates strong potential for assisting medical professionals in early detection of breast cancer. The high sensitivity is particularly valuable in medical diagnostics where false negatives (missing malignant tumors) have serious consequences.
+
+# 4. Diabetes Classification
+
+## Objective
+This project aims to predict whether a person has diabetes (Class = 1) or not (Class = 0) using the PIMA Indian Diabetes Dataset. Several machine learning classification algorithms were implemented, evaluated, and compared based on performance metrics like accuracy, sensitivity, and specificity.
+
+##  Dataset
+- File Used: pima-diabetes-data.csv
+- Shape: (767, 9)
+- Features:
+  - p_count: Patient count/index
+  - PGC: Plasma Glucose Concentration
+  - DBP: Diastolic Blood Pressure
+  - Tricep: Skinfold thickness
+  - SerumInsulin: 2-Hour serum insulin
+  - BMI: Body Mass Index
+  - DPF: Diabetes Pedigree Function
+  - Age: Age in years
+  - Class: Outcome (0 = Non-diabetic, 1 = Diabetic)
+
+## Data Ingestion & Cleaning
+- Read the dataset using pandas.
+- Renamed the columns for readability.
+- Checked for missing/null values.
+
+## Data Exploration & Visualization
+Used Seaborn and Matplotlib for:
+- Count plot of the target class.
+- Correlation heatmap.
+- Pair plot (disabled hue due to misassignment).
+
+## Data Preprocessing
+- Separated features (X) and labels (y).
+- Split data into train and test sets (80:20 ratio).
+- Applied standard scaling using StandardScaler.
+
+## Model Training
+Trained the following models using the training set:
+- Logistic Regression
+- Decision Tree Classifier
+- Random Forest Classifier
+- Support Vector Classifier (SVC)
+- K-Nearest Neighbors (KNN)
+- Naive Bayes (GaussianNB)
+
+## Model Evaluation
+Each model was evaluated using:
+- Confusion Matrix
+- Accuracy
+- Sensitivity (Recall for class 1)
+- Specificity (Recall for class 0)
+
+## Model Performance (Training Accuracy)
+- Logistic Regression:	          77.97%
+- Decision Tree:	                100%
+- Random Forest:	                99.84%
+- Support Vector Classifier:	   78.14%
+- K-Nearest Neighbors:	         84.66%
+- Naive Bayes:	                 76.18%
+
+#### Note: Decision Tree and Random Forest show signs of overfitting with near-perfect training accuracy
+
+## Evaluation Metrics (on Test Data)
+For each model, the following metrics were printed:
+- Confusion Matrix
+- Testing Accuracy
+- Sensitivity (Recall for positive class)
+- Specificity (Recall for negative class)
+
+## Libraries Used
+- pandas, numpy – Data manipulation
+- matplotlib, seaborn – Visualization
+- scikit-learn – Model building and evaluation
+  - LogisticRegression, DecisionTreeClassifier, RandomForestClassifier, SVC, KNeighborsClassifier, GaussianNB, train_test_split, StandardScaler, confusion_matrix
+
+## Conclusion
+- KNN, Logistic Regression, and SVC gave a good trade-off between accuracy and overfitting.
+- Random Forest and Decision Tree achieved high training accuracy but need regularization or pruning to avoid overfitting.
+- Further evaluation using cross-validation and ROC-AUC can help in better model selection.
+
+
